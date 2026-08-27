@@ -21,7 +21,7 @@ install(CODE "
   execute_process(
     COMMAND \"${_python_exe}\"
       \"${_project_src}/tools/wrap_headers.py\"
-      \"\${CMAKE_INSTALL_PREFIX}/${TORCH_INSTALL_INCLUDE_DIR}\"
+      \"\/home/runner/work/mosdns/mosdns/sdk/build_dir/target-aarch64_generic_glibc/pytorch-v2.13.0/ipkg-install/${CMAKE_INSTALL_PREFIX}/${TORCH_INSTALL_INCLUDE_DIR}\"
     COMMAND_ERROR_IS_FATAL ANY
   )
 ")
@@ -158,7 +158,7 @@ if(APPLE AND BUILD_PYTHON AND USE_OPENMP AND OpenMP_FOUND)
         COMMAND \"${_python_exe}\"
           \"${_project_src}/tools/embed_libomp_macos.py\"
           --libomp-path \"${OpenMP_libomp_LIBRARY}\"
-          --lib-dir \"\${CMAKE_INSTALL_PREFIX}/${TORCH_INSTALL_LIB_DIR}\"
+          --lib-dir \"\/home/runner/work/mosdns/mosdns/sdk/build_dir/target-aarch64_generic_glibc/pytorch-v2.13.0/ipkg-install/${CMAKE_INSTALL_PREFIX}/${TORCH_INSTALL_LIB_DIR}\"
         COMMAND_ERROR_IS_FATAL ANY
       )
     ")
