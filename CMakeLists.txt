@@ -45,6 +45,10 @@
 
 cmake_minimum_required(VERSION 3.27 FATAL_ERROR)
 
+if(CMAKE_VERSION VERSION_GREATER_EQUAL "4.0")
+  set(CMAKE_POLICY_VERSION_MINIMUM 3.5 CACHE STRING "" FORCE)
+endif()
+
 cmake_policy(SET CMP0126 OLD)
 # Don't remove the FindCUDA module
 cmake_policy(SET CMP0146 OLD)
